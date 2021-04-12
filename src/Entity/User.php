@@ -70,11 +70,6 @@ class User implements UserInterface
     private $city;
 
     /**
-     * @ORM\Column(type="date", nullable=true)
-     */
-    private $birthDate;
-
-    /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $companyName;
