@@ -28,7 +28,15 @@
 
 </head>
 <body style="overflow: visible;" cz-shortcut-listen="true">
-{% block body %}{% endblock %}
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a
+        href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+{% include 'header.html.twig' %}
+{% include 'side_mobile.html.twig' %}
+{% block body %}
+{% endblock %}
+{% include 'footer.html.twig' %}
 <script src="assets/js/modernizr-3.5.0.min.js"></script>
 <script src="assets/js/jquery-1.12.4.min.js"></script>
 <script src="assets/js/popper.min.js"></script>
