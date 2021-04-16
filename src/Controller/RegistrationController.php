@@ -4,13 +4,12 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\RegistrationFormType;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
-class RegistrationController extends AbstractController
+class RegistrationController extends AbstractRecycloController
 {
 
     /**
@@ -38,10 +37,10 @@ class RegistrationController extends AbstractController
             $entityManager->persist($user);
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_index_yolo');
+            return $this->redirectToRoute('index');
         }
 
-        return $this->render('registration/registration.html.twig', [
+        return $this->render('registration/registration.html.twig', $this->twigParams + [
             'registrationForm' => $form->createView(),
         ]);
     }
