@@ -1,0 +1,440 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Recyclovid</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/metisMenu.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- preloader end  -->
+    <!-- header-area start -->
+    <header id="top-menu" >
+        <div class="main-header-area heding-bg pos-rel pt-100" style="background-image:url(assets/img/bg/02.png)">
+            <div class="container custom-container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-xl-2 col-lg-2 col-md-6 col-6">
+                        <div class="logo">
+                            <a class="logo-img" href="index.html"><img src="assets/img/logo/logo.png"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-9 d-none d-lg-block text-lg-center text-xl-right">
+                        <div class="main-menu d-none d-lg-block">
+                            <nav>
+                                <ul>
+                                    <li><a class="#" href="#">Accueil</a></li>
+                                    <li><a href="#">L'association</a></li>
+                                    <li><a href="#">Actualités </a></li> 
+                                    <li><a href="active">FAQ</a></li>    
+                                    <li><a href="#">Agissez <i class="far fa-chevron-down"></i></a>
+                                        <ul class="submenu">
+                                            <li><a href="#">Adhérer</a></li>
+                                            <li><a href="#">Faire un don</a></li>
+                                            <li><a href="#">Devenir Bénévole</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-1 col-md-6 col-6 text-right">
+                        <div class="hamburger-menu d-lg-block d-xl-none">
+                            <a href="javascript:void(0);">
+                                <i class="far fa-bars"></i>
+                            </a>
+                        </div>
+                        <!-- Button trigger modal -->
+                        <div class="quote-btn d-none d-xl-block">
+                            <a href="#" class="theme_btn theme_btn_bg" data-bs-toggle="modal" data-bs-target="#loginModal">Espace Adhérent <i class="fas fa-sign-in-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-area end -->
+
+    <main>
+
+        <!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<script type="text/javascript" src="file://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script>
+ $(document).ready(function() {
+ 
+    $('.faq_question').click(function() {
+ 
+        if ($(this).parent().is('.open')){
+            $(this).closest('.faq').find('.faq_answer_container').animate({'height':'0'},500);
+            $(this).closest('.faq').removeClass('open');
+ 
+            }else{
+                var newHeight =$(this).closest('.faq').find('.faq_answer').height() +'px';
+                $(this).closest('.faq').find('.faq_answer_container').animate({'height':newHeight},500);
+                $(this).closest('.faq').addClass('open');
+            }
+ 
+    });
+ 
+});
+</script>
+<style>
+/*FAQS*/
+.faq_question {
+    margin: 0px;
+    padding: 0px 0px 5px 0px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+}
+ 
+.faq_answer_container {
+    height: 0px;
+    overflow: hidden;
+    padding: 0px;
+}
+        
+/* Image*/
+
+	.container {
+	display: flex;
+	align-content: space-around;
+	justify-content: space-around;
+	}
+	img {
+	max-width: 50%
+	}
+	
+	.text {
+	font-size: 20px;
+	padding-right: 10px;
+	}
+p.text1 {
+  font-family: 'Poppins', sans-serif;
+  margin: 20px;
+  padding-bottom: 50px;
+  
+  position: relative;
+    padding: 10px 0px;
+    text-align: center;
+    
+  
+      
+  
+}
+p.textfooter{
+text-align: center;
+font-size: x-small;
+
+}
+
+.covid{
+        color: green;
+		font-weight: bold;
+		
+}
+
+
+/*******Title****************/
+
+.title1 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px #f0f0f5;
+  line-height: 7em;
+  color: rgb(0, 128, 21);
+  background-image: url("img3.png");
+  background-position: center;
+  height: 200px; 
+  width: 100%;
+}
+
+h1.footer1 {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  font-size: xxx-large;
+}
+ul.s {
+  list-style-type: square;
+}
+
+ul.d {
+  list-style-type: disc;
+}
+ul.dec {
+  list-style-type:decimal
+}
+IMG.s {
+    display: block;
+}
+image {
+	display: block;
+    margin: auto;
+	flex-basis: 50%
+	
+    
+
+</style>
+
+ </head><body><h1 class="title1">FAQ - FOIRE AUX QUESTIONS</h1> 
+ <div class="image"> 
+     <img style="display: block; margin-left: auto; margin-right: auto; padding-bottom: 50px" src="assets/img/project/logo2.jpg">
+      </div>
+<div class="container" style="background-color: rgb(219, 235, 230)">
+      <div class="text" ><strong>
+        <p class="text1">La crise sanitaire a ralenti l’activité humaine et donc la pression sur l’environnement. Cependant elle n’est pas inoffensive pour la planète,<br> d’où la question du recyclage des masques chirurgicaux et FFP2, qui sont parfois simplement jetés dans les rues.
+        <br><span class="covid">Recyclo Vid</span>vous apporte un éclairage sur quelques éléments clés pour mieux comprendre le recyclage et le tri des masques.</p><p>
+      </p></strong></div>
+      
+
+    </div>
+
+	<br> <img class="image" style="display: block; margin-left: auto; margin-right: auto; padding-bottom: 50px" src="assets/img/project/30.jpg">
+<div class="faq_container">
+   <div class="faq">
+  
+      <div class="faq_container" style="background-color: rgb(219, 235, 230)">
+      <div class="faq_question">Pourquoi le recyclage et le tri des masques ?</div>
+           <div class="faq_answer_container">
+              <div class="faq_answer">Avec la crise sanitaire qui frappe la France , ils sont devenus un objet de tous les jours, et la question
+de leur traitement se pose naturellement. Face à la prolifération de masques jetables , il faut encourager le tri, créer des filières de recyclage et relocaliser la production en Europe et en France, préconisent jeudi deux députés au terme d'une mission parlementaire.
+Danielle Brulebois (LREM) et Gérard Leseul (SOC) se sont penchés sur le sujet depuis la mi-décembre.Il en ressort que l'usage de masques pour lutter contre la propagation du Covid-19 a entraîné entre « 40.000 et 100.000 tonnes de déchets non recyclés en 2020 en France », a indiqué la rapporteur. « Il
+est de notre devoir de nous pencher sur les conséquences écologiques de ce port du masque », a-telle souligné.
+              <b> valorisation matière</b> (transformation en nouvelle matière première, par exemple en fondant du verre usagé pour produire de nouveaux verres) ou d'une <b>valorisation énergétique</b> (utiliser la chaleur produite par la combustion, récupérer le méthane issu de la décomposition,...).
+                               <br><br>
+                               <b> nanoplastiques</b>
+                               <br><br>
+                               Le problème se pose pour les masques chirurgicaux, mais aussi certains masques en tissu qui contiennent des polymères, a-t-elle souligné. Ils sont source de pollution car produits à base de pétrole, souvent importés de Chine, ils émettent des nanoplastiques quand ils se dégradent dans la nature et même quand ils sont jetés correctement à la poubelle, l'incinération ou l'enfouissement ne sont pas des solutions satisfaisantes, selon les députés .
+			</div>
+           </div> 
+	</div> 
+	<div class="faq">
+
+        <div class="faq_container" style="background-color: rgb(219, 235, 230);">
+	    <div class="faq_question">Le recyclage des masques, comment cela fonctionne ?</div>
+	    <div class="faq_answer_container">
+              <div class="faq_answer">
+               <ul class="dec">
+			  <li><p>Déposez vos masques usagés (masques à usage unique et/ou masques en tissu) dans l'un des points de collecte de la Métropole</p></li>
+			  <li><p>Vos masques sont collectés puis décontaminés (tout comme les bornes) par un traitement innovant à base d’UV</p></li>
+		          <li><p>. Les masques sont traités, broyés et recyclés localement en intégrant l'une de ces trois filières : textiles (vêtements en polaire ...), bâtiment (matériaux d'isolation thermique, bétons ...), plasturgie (objets ou contenants en plastique ...)</p></li>
+                          <li></li>
+                  </ul>
+
+		</div>
+           </div>  
+	</div> 
+	<div class="faq">
+</div></div>
+        <div class="faq_container" style="background-color: rgb(219, 235, 230);">
+	    <div class="faq_question">Combien de fois peut-on recycler les masques ?</div>
+	    <div class="faq_answer_container">
+              <div class="faq_answer">
+			  Le pouvoir de filtration des masques chirurgicaux ne change pratiquement pas après avoir été portés (s’ils ne se mouillent pas), ni après avoir été stockés au sec à température ambiante, car la filtration repose sur le maillage des fibres et sur ses propriétés électrostatiques. Après 30 utilisations, la perte de filtration et d’ajustement au visage rendent le masque chirurgical comparable à un masque en tissu neuf. Donc, si l’on est soigneux, et que le masque ne reçoit pas de projections, on peut garder le masque très longtemps, et le recycler au moins 20 ou 30 fois, ce qui permet plus de six mois d’utilisation. Mais on peut choisir de renouveler plus souvent ses masques.
+			</div>
+           </div> 
+        </div> 
+	<div class="faq">
+
+        <div class="faq_container" style="background-color: rgb(219, 235, 230);">
+	    <div class="faq_question">Est-ce qu’il est compliqué de recycler un masque ? </div>
+	    <div class="faq_answer_container">
+              <div class="faq_answer">
+                D’un point de vue technologique, non. Les machines et les équipements existent… mais la mise en œuvre est assez compliquée puisque le processus complet représente une chaîne de 100m de long pour mettre en place les différentes étapes jusqu’au produit extrudé sous forme de granulés.
+			</div>
+           </div> 
+           <div class="faq">
+	    <div class="faq_question">Comment vous faites précisément ? </div>
+	    <div class="faq_answer_container">
+              <div class="faq_answer">
+                D’abord on collecte les masques : chaque borne peut réceptionner entre 1 800 à 2 000 masques.Elles font environ 50 litres et sont transparentes car on s’est rendu compte qu’il fallait afficher le déchet afin que les gens ne se trompent pas. Les bornes pleines sont remplacées par des vides puis déversées dans un centre avec un tunnel de décontamination à rayonnements UV. S’ensuit un processus de broyage, de dissociation des élastiques et de la barrette nasale. On sèche, on broie de nouveau puis il y a tout un processus jusqu’à l’extrusion.
+			</div>
+           </div> 
+        </div>
+           </div> 
+           <div class="faq">
+
+            <div class="faq_container" style="background-color: rgb(219, 235, 230)">
+	    <div class="faq_question">Concrètement que deviennent nos masques ? </div>
+	    <div class="faq_answer_container">
+              <div class="faq_answer">
+                Ils peuvent intégrer la filière bâtiment comme isolant, un substitut à la laine de verre par exemple.C’est également une fibre que l’on peut intégrer dans les bétons et enduis fibrés pour colmater les fissures des maisons. Dans le textile, on chauffe les granulés et les industriels tirent des fils pour créer des vêtements techniques comme des tenues de sport ou agricoles. Avec le polypropylène on peut faire des bâches, des filets… Dans la plasturgie, on peut concevoir des objets comme des pare-chocs, clignotants ou tableaux de bord de voitures.
+			</div>
+           </div> 
+	</div>      
+	</div> 
+	<div class="faq">	
+
+          <div class="faq_container" style="background-color: rgb(219, 235, 230)">	   
+		<div class="faq_question">Des pistes pour recycler les masques ?</div>
+	    <div class="faq_answer_container">
+              <div class="faq_answer">
+					Il y a des idées qui fleurissent depuis le début de la crise, industriels et chercheurs se démènent pour trouver des solutions.<br>
+	                Tout d’abord, nos chercheurs du CNRS et de l INSERM qui essaie tout simplement de réutiliser les masques chirurgicaux ou FFP2.<br>
+					L'objectif c'est de les décontaminer pour pouvoir les réutiliser tels quels. Le Pr Philippe Cinquin, chercheur, qui mène ces expérimentations, explique les différentes techniques qu’ils ont étudiées :  
+				
+<ul class="d">
+				<li>	•	Le lavage avec un détergent à haute température jusqu’à 95 degrés. </li>
+					
+				 <li>	•	Le passage en autoclave, sorte de cocotte-minute. </li>
+					
+				 <li>	•	L’irradiation.  </li>
+					
+</ul>
+	
+				Selon lui, cela fonctionne, les résultats sont confirmés en laboratoire mais il précise que ces techniques n ont pas encore obtenu d’autorisation de l’ANSM, l’agence du médicament, donc on ne peut pas encore les utiliser à grande échelle.
+			</div>
+           </div>
+		   	</div> 
+	<div class="faq">
+
+        <div class="faq_container" style="background-color: rgb(219, 235, 230)">
+		<div class="faq_question">Faut-il oublier les masques faits maison ?</div>
+	    <div class="faq_answer_container">
+              <div class="faq_answer">
+					« Ce qu'il faut, c'est encourager à  <b>recycler</b> », a insisté Danielle Brulebois, qui constate que « le recyclage des masques n'a pas constitué une priorité, ni pour les pouvoirs publics, ni pour les collectivités  ».
+					<br><br>
+					Pour Gérard Leseul, une première mesure est de « promouvoir l utilisation des masques réutilisables pour le grand public » afin de limiter les déchets. La possibilité de laver les masques chirurgicaux  « constitue aussi une piste intéressante », a complété Danielle Brulebois.
+
+			</div>
+           </div>
+	</div> 
+	<div class="faq">	
+
+        <div class="faq_container" style="background-color: rgb(219, 235, 230)"></div> 
+		<div class="faq_question" text-align="center">Mises en garde</div>
+	    <div class="faq_answer_container">
+              <div class="faq_answer">
+<ul class="s">
+	<li><p>Dans les cas où vous pensez que votre masque est très contaminé (unité de soins intensifs, conversation avec un malade ou un contact, grand rassemblement, salissure visible), il est préférable de jeter le masque. En effet, si la contamination de départ est massive, les particules virales ne sont peut-être pas toutes inactivées en 7 jours.</p></li>
+	<li><p>Dans les cas où votre masque a été mouillé, il faut le faire sécher avec soin, à l’air libre ou dans une enveloppe poreuse (en papier buvard), mais pas sous la pile. En théorie, un masque mouillé peut permettre le développement de germes dangereux pour un porteur immunodéprimé (par exemple un Aspergillus). Après séchage, le masque aura perdu une partie de son pouvoir filtrant, mais il restera plus efficace qu’un masque en tissu.</p></li>
+	<li><p>Si vous êtes particulièrement fragile ou immunodéprimé, il est prudent de continuer à jeter vos masques et d’en utiliser un neuf à chaque fois. Le même conseil vaut pour les soignants au contact de ces personnes.</p></li>
+	<li><p>Ne partagez pas vos masques avec d’autres. Chacun garde ses microbes pour éviter les contaminations entre personnes !</p></li>
+	<li><p>Ne pas stocker le masque au froid : le coronavirus se conserve longtemps à 4°C, et plus encore à -18°C dans le congélateur.</p></li>
+</ul>
+
+</div>
+ 
+ 
+ 
+</body></html>
+    </main>
+    <!--footer-area start-->
+    <footer class="footer-area heding-bg pos-rel pt-100" style="background-image:url(assets/img/bg/02.png)">
+        <div class="container">
+            <!--scroll-target-btn-->
+            <a href="#top-menu" class="scroll-target"><i class="far fa-arrow-up"></i></a>
+            <!--scroll-target-btn-->
+            <div class="copy-right-area pt-30">
+                <div class="row align-items-center">
+                    <div class="col-xl-7 col-lg-7 col-md-6">
+                        <div class="footer-log mb-30">
+                            <a href="index.html" class="footer-logo mb-30"><img src="assets/img/logo/logo.png"
+                                alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-5 col-md-6">
+                        <div class="copyright mb-30 text-md-right">
+                            <p>© 2021 Recyclovid. Tous droits réservés</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Espace Adhérent</h5>
+          <a data-bs-dismiss="modal" aria-label="Close" href="#"><i class="fas fa-times" ></i></a>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="Email" class="form-label text-dark">Adresse mail :</label>
+                  <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="Password" class="form-label text-dark">Mot de Passe :</label>
+                  <input type="password" class="form-control" id="Password">
+                </div>
+                <button type="submit" class="btn btn-success">Se connecter</button>
+              </form>
+        </div>
+        <div class="modal-footer"> 
+            <p>Pas encore adhérent ? <a href="#">Cliquez ici</a> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--footer-area end-->
+
+
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="assets/js/metisMenu.min.js"></script>
+    <script src="assets/js/jquery.nice-select.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.scrollUp.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.easypiechart.js"></script>
+    <script src="assets/js/tilt.jquery.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
