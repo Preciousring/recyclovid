@@ -1,0 +1,154 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+    <main>
+
+        <!--page-title-area start-->
+        <section class="page-title-area" style="background-image:url(assets/img/bg/page-title-bg.jpg);">
+            <div class="right-border-shape">
+                <img src="assets/img/shape/02.png" alt="">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1">
+                        <div class="page-title-wrapper text-center">
+                            <h1 class="page-title wow fadeInUp2  animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp2;">Contact</h1>
+                            <div class="breadcrumb">
+                                <ul class="breadcrumb-list wow fadeInUp2 animated" data-wow-delay=".3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+                                    <li><a href="index.html">Accueil<i class="fas fa-chevron-right"></i></a></li>
+                                    <li><a class="active" href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--page-title-area area-->
+        <!--contact-box-area start-->
+        <section class="contact-box-area pb-80 pt-125">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1">
+                        <div class="section-title text-center mb-85 wow fadeInUp2 animated" data-wow-delay=".1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
+                            <h6 class="left-line pl-75 pr-75">Nos projets</h6>
+                            <h2>Notre mission est de <br>
+                                <span>Proteger la planete</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                        <div class="contact-box d-lg-flex mb-50 wow fadeInUp2 animated" data-wow-delay=".1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
+                            <div class="contact-box__icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-box__content">
+                                <h4>Notre adresse</h4>
+                                <h5>1 Rue Pierre Adolphe Bobierre, 44300 Nantes</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                        <div class="contact-box d-lg-flex mb-50 wow fadeInUp2 animated" data-wow-delay=".3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+                            <div class="contact-box__icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-box__content">
+                                <h4>Envoyez nous un mail</h4>
+                                <h5>contact@recyclovid.com</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                        <div class="contact-box d-lg-flex mb-50 wow fadeInUp2 animated" data-wow-delay=".5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
+                            <div class="contact-box__icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-box__content">
+                                <h4>Appelez nous</h4>
+                                <h5>02 01 01 01 01</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--contact-box-area end-->
+        <!--contact-area start-->
+        <section class="contact-details-area pb-120 wow fadeInUp2 animated" data-wow-delay=".3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="post-form-area contact-form pt-125">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="input-box">
+                                        <h5>Votre nom</h5>
+                                        <div class="input-text mb-35">
+                                            <input type="text" class="form-control" placeholder="Nom Complet">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="input-box mb-35">
+                                        <h5>Votre adresse mail</h5>
+                                        <div class="input-text input-mail">
+                                            <input type="text" class="form-control" placeholder="Email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="input-box mb-35">
+                                        <h5>Numéro de telephone</h5>
+                                        <div class="input-text input-phone">
+                                            <input type="text" class="form-control" placeholder="Écrivez votre Numéro de telephone">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="input-box mb-35">
+                                        <h5>Sujet</h5>
+                                        <div class="input-text input-sub">
+                                            <input type="text" class="form-control" placeholder="Sujet de votre message">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12">
+                                    <div class="input-box mb-35">
+                                        <h5>Laissez nous un message</h5>
+                                        <div class="input-text input-message">
+                                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Écrivez votre Message"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-6">
+                                    <div class="msg-btn text-md-center">
+                                        <a class="theme_btn theme_btn_bg" href="#">Envoyer le message <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--contact-area end-->
+        <!--map-area start-->
+        <section class="contact-map-area">
+            <div class="container-fluid pl-0 pr-0">
+                <div class="row no-gutters">
+                    <div class="col-xl-12">
+                        <div class="map-area map-02  wow fadeInUp2 animated" data-wow-delay=".1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
+                           <iframe width="700" height="440" src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=1%20Rue%20Pierre%20Adolphe%20Bobierre%2C%2044300%20Nantes+(Campus%20Academy)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+{#                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29168.42973837642!2d90.37845363955077!3d23.958540550000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1606918909925!5m2!1sen!2sbd"></iframe>#}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--map-area end-->
+    </main>
+{% endblock %}

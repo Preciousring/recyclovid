@@ -92,11 +92,32 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-xl-12 col-lg-12 col-md-6">
+                                    <div class="msg-btn text-md-center">
+                                        {{ form_row(registrationForm.isCompany, {label_attr: {class: 'checkbox-custom'}, attr: {onclick: 'companyInputs()'}}  ) }}
+                                    </div>
+                                </div>
+
+                                    <div id="CompanyDiv" class="col-xl-6 col-lg-6 col-md-6" style="display: none">
+                                            <div class="input-box mb-35">
+                                                <div class="input-registration">
+                                                    {{ form_row(registrationForm.companyName, {label_attr: {class: 'h5'} }) }}
+                                                </div>
+                                            </div>
+                                    </div>
+
+                                    <div id="CompanyDiv2" class=" col-xl-6 col-lg-6 col-md-6" style="display: none">
+                                        <div class="input-box mb-35">
+                                            <div class="input-registration" style="height: auto !important;">
+                                                {{ form_row(registrationForm.siretNumber, {label_attr: {class: 'h5'} }) }}
+                                            </div>
+                                        </div>
+                                    </div>
+
 
                                 <div class="col-xl-12 col-lg-12 col-md-6">
                                     <div class="msg-btn text-md-center">
                                         {{ form_row(registrationForm.agreeTerms, {label_attr: {class: 'checkbox-custom'}} ) }}
-                                        {#                                        <input type="submit" value="S'inscrire" class="theme_btn theme_btn_bg">#}
                                     </div>
                                 </div>
                                 <div class="col-xl-12 col-lg-12 col-md-6">
@@ -118,6 +139,20 @@
         <!--registration-area end-->
 
     </main>
+    <script>function companyInputs() {
+            let x = document.getElementById("CompanyDiv");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
 
+            let y = document.getElementById("CompanyDiv2");
+            if (y.style.display === "none") {
+                y.style.display = "block";
+            } else {
+                y.style.display = "none";
+            }
+        } </script>
 
 {% endblock %}

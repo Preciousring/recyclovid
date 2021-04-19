@@ -4873,9 +4873,11 @@ ul.timeline li.timeline-list:hover::after {
 }
 .contact-form .input-box .input-text.input-phone::before {
   content: '\f095';
+  font-weight: 900;
 }
 .contact-form .input-box .input-text.input-sub::before {
-  content: '\f095';
+  content: '\f303';
+  font-weight: 900;
 }
 .contact-form .input-box .input-message::before {
   display: none;
