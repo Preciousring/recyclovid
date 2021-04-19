@@ -1,7 +1,56 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello GiveMaskController!{% endblock %}
+{% block title %}Recyclez vos Masques{% endblock %}
 
 {% block body %}
-    {{ form(giveMaskForm) }}
+    <!--page-title-area start-->
+    <section class="page-title-area" style="background-image:url(#);">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <div class="page-title-wrapper text-center">
+                        <h1 class="page-title wow fadeInUp2 animated" data-wow-delay='.1s'>Recyclez vos Masques</h1>
+                        <div class="breadcrumb">
+                            <ul class="breadcrumb-list wow fadeInUp2 animated" data-wow-delay='.3s'>
+                                <li><a href="index.html">Accueil <i class="fas fa-chevron-right"></i></a></li>
+                                <li><a class="active" href="#">Recyclez vos Masques</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--page-title-area area-->
+
+    <section class="contact-details-area pb-120 wow fadeInUp2 animated" data-wow-delay='.3s'>
+        {{ form_start(giveMaskForm) }}
+        {{ form_errors(giveMaskForm) }}
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="registration-form-area contact-form pt-125">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="input-box mb-35">
+                                    <div class="input-registration">
+                                        {{ form_row(giveMaskForm.date, {label_attr: {class: 'h5'} }) }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="input-box mb-35">
+                                    <div class="input-registration">
+                                        {{ form_row(giveMaskForm.depositLocation, {label_attr: {class: 'h5'} }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ form_end(giveMaskForm) }}
+    </section>
 {% endblock %}
