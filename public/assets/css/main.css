@@ -2130,6 +2130,7 @@ section-title
 }
 .main-header-area .logo-img img {
   max-width: 100%;
+  margin-bottom: 20px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .main-header-area {
@@ -6819,10 +6820,10 @@ ul.timeline li.timeline-list:hover::after {
 
 /* Login Form*/
 .card{
-  height: 370px;
+  height: auto;
   margin-top: auto;
   margin-bottom: auto;
-  width: 400px;
+  width:100%;
   background-color: rgba(0,0,0,0.5) !important;
 }
 
@@ -6872,3 +6873,30 @@ input:focus{
   border-radius: 0;
 }
 
+.text-black {
+ color: #000000;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.card-faq {
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5) !important;
+}

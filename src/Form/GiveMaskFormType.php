@@ -3,8 +3,10 @@
 namespace App\Form;
 
 use App\Entity\Deposit;
+use App\Entity\DepositLocation;
 use App\Entity\MaskType;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -25,10 +27,18 @@ class GiveMaskFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('date', DateTimeType::class, ['label' => 'Date et heure de Dépôt'])
-            ->add('depositLocation', null, [
+            ->add('date', DateTimeType::class, [
+                'label' => 'Date et heure de Dépôt',
+                'attr' => ['class' => 'width-100'],
+                'date_widget' => 'single_text',
+                'time_widget' => 'single_text',
+
+            ])
+            ->add('depositLocation', EntityType::class, [
+                'class' => DepositLocation::class,
                 'label' => 'Lieu de Dépôt',
                 'placeholder' => 'Choisissez une option',
+                'attr' => ['class' => 'width-100 select-mz-gc'],
             ]);
 
         /**
@@ -36,9 +46,10 @@ class GiveMaskFormType extends AbstractType
          */
         foreach ($this->em->getRepository(MaskType::class)->findAll() as $maskType) {
             $builder->add('depositContent' . $maskType->getId(), IntegerType::class, [
-                'label' => 'Nb de masque de type ' . $maskType->getLabel(),
+                'label' => 'Nombre de masques de type ' . $maskType->getLabel(),
                 'mapped' => false,
-                'required' => false
+                'required' => false,
+                'attr' => ['class' => 'width-100 select-mz-gc'],
             ]);
         }
 

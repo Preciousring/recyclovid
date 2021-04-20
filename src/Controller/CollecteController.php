@@ -6,15 +6,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ActualitesController extends AbstractRecycloController
+class CollecteController extends AbstractRecycloController
 {
     /**
-     * @Route("/actualites", name="actualites")
+     * @Route("/collecte", name="collecte")
      */
     public function index(): Response
     {
-        return $this->render('actualites/index.html.twig', $this->twigParams + [
-            'controller_name' => 'ActualitesController',
+        return $this->render('collecte/index.html.twig', $this->twigParams + [
+            'controller_name' => 'CollecteController',
         ]);
     }
 }
