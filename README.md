@@ -1,5 +1,5 @@
 # Recyclovid
 
-#### Projet d'études en groupe.
+### Projet d'études en groupe.
 
-**But :** créer un site internet pour association fictive
+**But :** Créer un site internet pour association fictive
