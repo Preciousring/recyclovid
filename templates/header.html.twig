@@ -13,9 +13,12 @@
             <div class="row align-items-center">
                 <div class="col-xl-7 col-lg-8">
                     <ul class="login-area">
-                        <li><span >Bienvenue sur Recyclovid. Le Recyclage, mais autrement.</span></li>
+                        <li><span >Bienvenue sur Recyclovid. Vers un monde meilleur.</span></li>
                         {% if app.user %}
-                            <span class="media-link"><p class="h5"><i class="fas fa-user"> Bonjour {{ app.user.email }}</i></p> </span>
+                            <span class="media-link"><p class="h5"><i class="fas fa-user"> Bonjour {{ app.user.firstName }}</i></p></span>
+                            <span><a
+                                        href="/logout"> Se déconnecter</a></span>
+
                         {% else %}
                         <li><!-- Button trigger modal -->
                             <a class="sign_btn" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i
@@ -76,12 +79,20 @@
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-1 col-md-6 col-6 text-right d-flex align-items-center justify-content-end">
-                    <div class="quote-btn mr-10">
-                        <li>
-                            <a class="theme_btn theme_btn_bg" href="registration" ><i
-                                        class="fas fa-user-lock"></i> S'enregistrer</a>
-                        </li>
-                    </div>
+                    {% if app.user %}
+                        <div class="quote-btn mr-10">
+                            <li>
+                                <a class="theme_btn theme_btn_bg" href="give-mask" >Recyclez vos masques</a>
+                            </li>
+                        </div>
+                        {% else %}
+                            <div class="quote-btn mr-10">
+                                <li>
+                                    <a class="theme_btn theme_btn_bg" href="registration" ><i
+                                                class="fas fa-user-lock"></i> S'enregistrer</a>
+                                </li>
+                            </div>
+                    {% endif %}
                     <div class="d-block d-sm-none">
                         <div class="hamburger-menu">
                             <a href="javascript:void(0);">
