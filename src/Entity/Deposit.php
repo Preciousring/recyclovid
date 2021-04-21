@@ -116,4 +116,5 @@ class Deposit
 
         return $this;
     }
+
 }

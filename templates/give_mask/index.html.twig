@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recyclez vos Masques{% endblock %}
+
+
+{% block body %}
+    <main>
+        <!--page-title-area start-->
+        <section class="page-title-area" style="background-image:url(assets/img/bg.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1">
+                        <div class="page-title-wrapper text-center">
+                            <h1 class="page-title wow fadeInUp2 animated" data-wow-delay='.1s'>Recyclez vos Masques</h1>
+                            <div class="breadcrumb">
+                                <ul class="breadcrumb-list wow fadeInUp2 animated" data-wow-delay='.3s'>
+                                    <li><a href="index.html">Accueil <i class="fas fa-chevron-right"></i></a></li>
+                                    <li><a class="active" href="#">Recyclez vos Masques</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--page-title-area area-->
+        <section class="contact-box-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1 pt-75">
+                        <div class="section-title text-center mb-85 wow fadeInUp2  animated" data-wow-delay=".1s"
+                             style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp2;">
+                            <h6 class="left-line pl-75 pr-75">Formulaire de dépôts de Masques</h6>
+                            <h2>Prenez rendez-vous afin de <br>
+                                <span>recycler vos masques</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-details-area pb-120 wow fadeInUp2 animated" data-wow-delay='.3s'>
+            {{ form_start(giveMaskForm) }}
+            {{ form_errors(giveMaskForm) }}
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="registration-form-area contact-form pt-75">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6  offset-md-3">
+                                    <div class="input-box mb-35">
+                                        <div class="input-registration">
+                                            {{ form_row(giveMaskForm.date, {label_attr: {class: 'h5 text-black'} }) }}
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6  offset-md-3">
+                                <div class="input-box mb-35">
+                                    <div class="input-registration">
+                                        {{ form_row(giveMaskForm.depositLocation, {label_attr: {class: 'h5 text-black '} }) }}
+                                    </div>
+                                </div>
+                                <br>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6  offset-md-3">
+
+                                    <div class="input-box mb-35">
+                                        <div class="input-registration">
+                                            {{ form_row(giveMaskForm.depositContent1, {label_attr: {class: 'h5 text-black'} }) }}
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6  offset-md-3">
+                                <div class="input-box mb-35">
+                                    <div class="input-registration">
+                                        {{ form_row(giveMaskForm.depositContent2, {label_attr: {class: 'h5 text-black'} }) }}
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="col-xl-12 col-lg-12 col-md-6">
+                            <div class="msg-btn text-md-center">
+                                {{ form_row(giveMaskForm.submit, {attr: {class: 'theme_btn theme_btn_bg'} }) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            {{ form_end(giveMaskForm) }}
+        </section>
+    </main>
+{% endblock %}
+

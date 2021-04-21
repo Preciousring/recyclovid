@@ -1,0 +1,7 @@
+assetic:
+  filters:
+    uglifyjs2:
+      # the path to the uglifyjs executable
+      bin: /home/preciousring/.nvm/versions/node/v14.15.4/bin/uglifyjs
+    uglifycss:
+      bin: /home/preciousring/.nvm/versions/node/v14.15.4/bin/uglifycss

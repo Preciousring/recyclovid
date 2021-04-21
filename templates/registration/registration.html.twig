@@ -3,6 +3,156 @@
 {% block title %}Formulaire d'inscription!{% endblock %}
 
 {% block body %}
+    <main>
 
-{{ form(registrationForm) }}
+        <!--page-title-area start-->
+        <section class="page-title-area" style="background-image:url(assets/img/bg.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1">
+                        <div class="page-title-wrapper text-center">
+                            <h1 class="page-title wow fadeInUp2 animated" data-wow-delay='.1s'>S'inscrire</h1>
+                            <div class="breadcrumb">
+                                <ul class="breadcrumb-list wow fadeInUp2 animated" data-wow-delay='.3s'>
+                                    <li><a href="index.html">Accueil <i class="fas fa-chevron-right"></i></a></li>
+                                    <li><a class="active" href="#">S'inscrire</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--page-title-area area-->
+        <!--registration-area start-->
+
+        <section class="contact-details-area pb-120 wow fadeInUp2 animated" data-wow-delay='.3s'>
+            {{ form_start(registrationForm) }}
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="registration-form-area contact-form pt-125">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="input-box mb-35">
+                                        <div class="input-registration">
+                                            {{ form_row(registrationForm.email, {label_attr: {class: 'h5'} }) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="input-box mb-35">
+                                        <div class="input-registration" style="height: auto !important;">
+                                            {{ form_row(registrationForm.plainPassword, {label_attr: {class: 'h5'} }) }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="input-box mb-35">
+                                        <div class="input-registration">
+                                            {{ form_row(registrationForm.firstName, {label_attr: {class: 'h5'} }) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="input-box mb-35">
+                                        <div class="input-registration" style="height: auto !important;">
+                                            {{ form_row(registrationForm.lastName, {label_attr: {class: 'h5'} }) }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="input-box mb-35">
+                                        <div class="input-registration">
+                                            {{ form_row(registrationForm.address1, {label_attr: {class: 'h5'} }) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="input-box mb-35">
+                                        <div class="input-registration" style="height: auto !important;">
+                                            {{ form_row(registrationForm.address2, {label_attr: {class: 'h5'} }) }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="input-box mb-35">
+                                        <div class="input-registration">
+                                            {{ form_row(registrationForm.zipcode, {label_attr: {class: 'h5'} }) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6">
+                                    <div class="input-box mb-35">
+                                        <div class="input-registration" style="height: auto !important;">
+                                            {{ form_row(registrationForm.city, {label_attr: {class: 'h5'} }) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-6">
+                                    <div class="msg-btn text-md-center">
+                                        {{ form_row(registrationForm.isCompany, {label_attr: {class: 'checkbox-custom'}, attr: {onclick: 'companyInputs()'}}  ) }}
+                                    </div>
+                                </div>
+
+                                    <div id="CompanyDiv" class="col-xl-6 col-lg-6 col-md-6" style="display: none">
+                                            <div class="input-box mb-35">
+                                                <div class="input-registration">
+                                                    {{ form_row(registrationForm.companyName, {label_attr: {class: 'h5'} }) }}
+                                                </div>
+                                            </div>
+                                    </div>
+
+                                    <div id="CompanyDiv2" class=" col-xl-6 col-lg-6 col-md-6" style="display: none">
+                                        <div class="input-box mb-35">
+                                            <div class="input-registration" style="height: auto !important;">
+                                                {{ form_row(registrationForm.siretNumber, {label_attr: {class: 'h5'} }) }}
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                <div class="col-xl-12 col-lg-12 col-md-6">
+                                    <div class="msg-btn text-md-center">
+                                        {{ form_row(registrationForm.agreeTerms, {label_attr: {class: 'checkbox-custom'}} ) }}
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-6">
+                                    <div class="msg-btn text-md-center">
+                                        {{ form_row(registrationForm.submit, {attr: {class: 'theme_btn theme_btn_bg'} }) }}
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ form_end(registrationForm) }}
+        </section>
+
+        <!--registration-area end-->
+
+    </main>
+    <script>function companyInputs() {
+            let x = document.getElementById("CompanyDiv");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+
+            let y = document.getElementById("CompanyDiv2");
+            if (y.style.display === "none") {
+                y.style.display = "block";
+            } else {
+                y.style.display = "none";
+            }
+        } </script>
+
 {% endblock %}

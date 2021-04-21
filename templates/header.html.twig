@@ -13,8 +13,19 @@
             <div class="row align-items-center">
                 <div class="col-xl-7 col-lg-8">
                     <ul class="login-area">
-                        <li><span>Bienvenue sur Recyclovid. --Slogan--</span></li>
-                        <li><a class="sign_btn" href="#"><i class="fas fa-sign-in-alt"></i> Se connecter</a></li>
+                        <li><span >Bienvenue sur Recyclovid. Vers un monde meilleur.</span></li>
+                        {% if app.user %}
+                            <span class="media-link"><p class="h5"><i class="fas fa-user"> Bonjour {{ app.user.firstName }}</i></p></span>
+                            <span><a
+                                        href="/logout"> Se déconnecter</a></span>
+
+                        {% else %}
+                        <li><!-- Button trigger modal -->
+                            <a class="sign_btn" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i
+                                        class="fas fa-sign-in-alt"></i> Se connecter</a>
+                        </li>
+                        {% endif %}
+
                     </ul>
                 </div>
                 <div class="col-xl-5 col-lg-5 d-none d-xl-block">
@@ -34,7 +45,7 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-xl-2 col-lg-2 col-md-6 col-6">
                     <div class="logo">
-                        <a class="logo-img" href="index.html"><img src="assets/img/logo/logo.png"
+                        <a class="logo-img" href="/"><img src="assets/img/logo/logo.png"
                                                                    alt=""></a>
                     </div>
                 </div>
@@ -42,30 +53,46 @@
                     <div class="main-menu main-menu-02 d-none d-lg-block">
                         <nav>
                             <ul>
-                                <li><a class="active" href="#">Accueil</a></li>
+                                <li><a href="/">Accueil</a></li>
                                 <li><a href="#">L'association<i class="fas fa-chevron-down"></i></a>
                                     <ul class="submenu">
-                                        <li><a href="history.html">A Propos</a></li>
-                                        <li><a href="faq.html">FAQ</a></li>
+                                        <li><a href="about">A Propos</a></li>
+                                        <li><a href="faq">FAQ</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Actualités </a></li>
+                                <li><a href="#">Actualités </a>
+                                    <ul class="submenu">
+                                        <li><a href="collecte">Collecte</a></li>
+                                        <li><a href="recyclage">Recyclage</a></li>
+                                        <li><a href="equipement">Équipement</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="#">Agissez <i class="fas fa-chevron-down"></i></a>
                                     <ul class="submenu">
-                                        <li><a href="history.html">Recyclez vos masques</a></li>
-                                        <li><a href="faq.html">Faîtes un don</a></li>
+                                        <li><a href="give-mask">Recyclez vos masques</a></li>
+                                        <li><a href="#">Faîtes un don</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="contact">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-1 col-md-6 col-6 text-right d-flex align-items-center justify-content-end">
-                    <div class="quote-btn mr-10">
-                        <a href="login.html" class="theme_btn theme_btn_bg">S'inscrire <i
-                                    class="fas fa-user-lock"></i></a>
-                    </div>
+                    {% if app.user %}
+                        <div class="quote-btn mr-10">
+                            <li>
+                                <a class="theme_btn theme_btn_bg" href="give-mask" >Recyclez vos masques</a>
+                            </li>
+                        </div>
+                        {% else %}
+                            <div class="quote-btn mr-10">
+                                <li>
+                                    <a class="theme_btn theme_btn_bg" href="registration" ><i
+                                                class="fas fa-user-lock"></i> S'enregistrer</a>
+                                </li>
+                            </div>
+                    {% endif %}
                     <div class="d-block d-sm-none">
                         <div class="hamburger-menu">
                             <a href="javascript:void(0);">
@@ -80,3 +107,68 @@
     </div>
 </header>
 <!-- header-area end -->
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Se Connecter</h5>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="{{ path('app_login') }}">
+                    {% if error %}
+                        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+
+                    {% if app.user %}
+                        <div class="mb-3">
+                            You are logged in as {{ app.user.email }}, <a href="{{ path('app_logout') }}">Logout</a>
+                        </div>
+                    {% endif %}
+
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" value="{{ email }}" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+                        <input type="hidden" name="_csrf_token"
+                               value="{{ csrf_token('authenticate') }}"
+                        >
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Mot de Passe" required>
+                        <input type="hidden" name="_csrf_token"
+                               value="{{ csrf_token('authenticate') }}"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Se Connecter" class="btn float-right login_btn">
+                    </div>
+                </form>
+                    {#
+                    Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                    See https://symfony.com/doc/current/security/remember_me.html
+
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" name="_remember_me"> Remember me
+                        </label>
+                    </div>
+                    #}
+            </div>
+            <div class="card-footer">
+                <div class="d-flex justify-content-center links">
+                    Vous n'avez pas de compte ?<a href="#" class="login-link">Inscrivez-vous</a>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="login-link">Vous avez oublié votre mot de passe ?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

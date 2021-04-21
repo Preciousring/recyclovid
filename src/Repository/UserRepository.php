@@ -36,10 +36,12 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         $this->_em->flush();
     }
 
-    public function getUsersLastDays() {
-        $result  = $this->getEntityManager()->getConnection()->prepare('SELECT COUNT(id) num, DATE(created_at) d FROM user GROUP BY DATE(created_at)');
-        $result->execute();
-        return $result->fetchAll(FetchMode::STANDARD_OBJECT);
+    public function getUsersCount()
+    {
+        return $this->createQueryBuilder('user')
+            ->select('COUNT(user.id)')
+            ->getQuery()
+            ->getSingleScalarResult();
     }
 
     // /**
